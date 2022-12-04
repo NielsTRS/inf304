@@ -1,0 +1,11 @@
+Executions pour mettre en lumière les interprètes incorrects :
+./curiosity-test0 ex3/terrains/terrain3 ex3/programmes/prg3
+./curiosity-test2 ex3/terrains/terrain3 ex3/programmes/prg3
+./curiosity-test3 ex3/terrains/terrain5 ex3/programmes/prg7
+./curiosity-test4 ex3/terrains/terrain4 ex3/programmes/prg4
+./curiosity-test5 ex3/terrains/terrain1 ex3/programmes/prg1
+./curiosity-test6 ex3/terrains/terrain2 ex3/programmes/prg5
+./curiosity-test8 ex3/terrains/terrain1 ex3/programmes/prg6
+./curiosity-test9 ex3/terrains/terrain5 ex3/programmes/prg8
+
+Les autres (1 et 3) sont corrects
