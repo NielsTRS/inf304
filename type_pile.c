@@ -20,13 +20,13 @@ int taille(PileEntiers *p) { return p->n; }
 
 /* Afficher les éléments de la pile */
 void print(PileEntiers *p) {
-  int i;
+    int i;
 
-  printf("[ ");
-  for (i = p->n - 1; i >= 0; i--) {
-    printf("%d ", p->tab[i]);
-  }
-  printf("]");
+    printf("[ ");
+    for (i = p->n - 1; i >= 0; i--) {
+        printf("%d ", p->tab[i]);
+    }
+    printf("]");
 }
 
 /* Opérations de modification */
@@ -37,13 +37,13 @@ void vider(PileEntiers *p) { p->n = 0; }
 /* Empiler un entier x */
 /* Précondition : taille(p) < TAILLE_MAX */
 void empiler(PileEntiers *p, int x) {
-  p->tab[p->n] = x;
-  p->n = p->n + 1;
+    p->tab[p->n] = x;
+    p->n = p->n + 1;
 }
 
 /* Supprimer et renvoyer l'entier en haut de la pile */
 /* Précondition : p non vide */
 int depiler(PileEntiers *p) {
-  p->n = p->n - 1;
-  return p->tab[p->n];
+    p->n = p->n - 1;
+    return p->tab[p->n];
 }

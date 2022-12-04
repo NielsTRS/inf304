@@ -1,5 +1,7 @@
-typedef enum { I, M , E } etat;
-typedef struct{
+typedef enum {
+    I, M, E
+} etat;
+typedef struct {
     etat etat;
 } automate;
 

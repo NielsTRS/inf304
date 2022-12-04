@@ -4,8 +4,8 @@
 #define TAILLE_MAX 10000
 
 typedef struct {
-  int n;
-  int tab[TAILLE_MAX];
+    int n;
+    int tab[TAILLE_MAX];
 } PileEntiers;
 
 /* Constructeurs */

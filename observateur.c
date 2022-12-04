@@ -4,11 +4,10 @@
 #include "observateur.h"
 
 
-
-etat transitionAutomate(etat etat, char c){
-    switch(etat){
+etat transitionAutomate(etat etat, char c) {
+    switch (etat) {
         case I:
-            switch(c){
+            switch (c) {
                 case 'M':
                     return M;
                 case 'A':
@@ -17,7 +16,7 @@ etat transitionAutomate(etat etat, char c){
                     return I;
             }
         case M:
-            switch(c){
+            switch (c) {
                 case 'A':
                     return I;
                 case 'G':
@@ -30,7 +29,7 @@ etat transitionAutomate(etat etat, char c){
         case E:
             return E;
         default:
-        printf("Erreur l'automate est sur un état inconnu");
+            printf("Erreur l'automate est sur un état inconnu");
             exit(1);
     }
 }

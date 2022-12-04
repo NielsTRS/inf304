@@ -1,11 +1,13 @@
 #ifndef _ROBOT_H_
 #define _ROBOT_H_
 
-typedef enum { Nord, Est, Sud, Ouest } Orientation;
+typedef enum {
+    Nord, Est, Sud, Ouest
+} Orientation;
 
 typedef struct {
-  int x, y;
-  Orientation o;
+    int x, y;
+    Orientation o;
 } Robot;
 
 /* initialiser le robot r en position (x,y) et orientation o */

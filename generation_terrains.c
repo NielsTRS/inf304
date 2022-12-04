@@ -48,12 +48,12 @@ void generation_aleatoire_modifiee(Terrain *T, int l, int h, float dObst) {
                     eauOuRocher = rand() % 2;
                     if (eauOuRocher == 0) {
                         T->tab[i][j] = EAU;
-                        if(existe_chemin_vers_sortie(T)== 0 ){
+                        if (existe_chemin_vers_sortie(T) == 0) {
                             T->tab[i][j] = LIBRE;
                         }
                     } else {
                         T->tab[i][j] = ROCHER;
-                        if(existe_chemin_vers_sortie(T)== 0 ){
+                        if (existe_chemin_vers_sortie(T) == 0) {
                             T->tab[i][j] = LIBRE;
                         }
                     }
@@ -64,6 +64,7 @@ void generation_aleatoire_modifiee(Terrain *T, int l, int h, float dObst) {
         }
     }
 }
+
 // determine s'il existe un chemin du centre au bord du terrain T
 // version avec tableau annexe
 int existe_chemin_vers_sortie(Terrain *T) {
