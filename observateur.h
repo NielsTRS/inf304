@@ -3,4 +3,4 @@ typedef struct{
     etat etat;
 } automate;
 
-etat transition(etat etat, char c);
+etat transitionAutomate(etat etat, char c);

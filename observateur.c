@@ -5,7 +5,7 @@
 
 
 
-etat transition(etat etat, char c){
+etat transitionAutomate(etat etat, char c){
     switch(etat){
         case I:
             switch(c){

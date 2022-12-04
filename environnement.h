@@ -3,12 +3,14 @@
 
 #include "robot.h"
 #include "terrain.h"
+#include "observateur.h"
 
 /* Environnement : terrain + robot */
 
 typedef struct {
   Robot r;
   Terrain t;
+  automate Automate;
 } Environnement;
 
 /* Initialise l'environnement envt :
