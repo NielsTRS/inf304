@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "generation_terrains.h": "c"
+        "generation_terrains.h": "c",
+        "observateur.h": "c"
     }
 }

@@ -87,7 +87,6 @@ int main(int argc, char **argv)
 {
     Environnement envt;
     Programme prog;
-    erreur_terrain errt;
     erreur_programme errp;
     etat_inter etat;
     resultat_inter res;
