@@ -37,6 +37,12 @@ void gestion_erreur_terrain(erreur_terrain e) {
         case ERREUR_LIGNES_MANQUANTES:
             printf("Erreur lecture du terrain : lignes manquantes\n");
             exit(1);
+            case ERREUR_LARGEUR:
+        printf("Erreur largeur du terrain \n");
+        exit(1);
+    case ERREUR_HAUTEUR:
+        printf("Erreur hauteur du terrain \n");
+        exit(1);
         case ERREUR_POSITION_ROBOT_MANQUANTE:
             printf(
                     "Erreur lecture du terrain : position initiale du robot manquante\n");
@@ -103,6 +109,7 @@ int main(int argc, char **argv) {
     FILE *fRES = fopen(fichier_res, "w");
     fprintf(fRES, "%d\n", N);
     Robot robot;
+    init_robot(&robot, L / 2, H / 2, Est);
     envt.r = robot;
     srand(graine);
     int nbRobotSorti = 0;
@@ -113,11 +120,12 @@ int main(int argc, char **argv) {
     for (int i = 0; i < N; i++) {
         Terrain *t = malloc(sizeof(Terrain));
 
-        generation_aleatoire_modifiee(t, L, H, dObst);
+        generation_aleatoire(t, L, H, dObst);
+        while(existe_chemin_vers_sortie(t) == 0){
+            generation_aleatoire(t, L, H, dObst);
+        }
         envt.t = *t;
-        envt.r.x = L / 2;
-        envt.r.y = H / 2;
-        envt.r.o = Est;
+        init_robot(&envt.r, L / 2, H / 2, Est);
         init_etat(&etat);
         int j = 0;
         do {

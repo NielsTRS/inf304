@@ -86,7 +86,10 @@ void droite_envt(Environnement *envt) {
      3 erreur (valeur du paramètre incorrect)
  */
 int mesure_envt(Environnement *envt, int d) {
+  if(d == 1){
     envt->Automate.etat = transitionAutomate(envt->Automate.etat, 'M');
+  }
+    
     int x, y;   // Position courante du robot
     int dx, dy; // Direction du robot
     int mx, my; // Position de la mesure

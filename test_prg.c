@@ -30,12 +30,8 @@ int main(int argc, char **argv) {
     fclose(f);
     Environnement envt;
     Programme prog;
-    erreur_terrain errt;
-    erreur_programme errp;
     etat_inter etat;
     resultat_inter res;
-    errt = initialise_environnement(&envt, nomTerrain);
-    errp = lire_programme(&prog, nomProgramme);
     init_etat(&etat);
     do {
         res = exec_pas(&prog, &envt, &etat);

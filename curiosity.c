@@ -36,6 +36,12 @@ void gestion_erreur_terrain(erreur_terrain e) {
         case ERREUR_LIGNES_MANQUANTES:
             printf("Erreur lecture du terrain : lignes manquantes\n");
             exit(1);
+              case ERREUR_LARGEUR:
+        printf("Erreur largeur du terrain \n");
+        exit(1);
+    case ERREUR_HAUTEUR:
+        printf("Erreur hauteur du terrain \n");
+        exit(1);
         case ERREUR_POSITION_ROBOT_MANQUANTE:
             printf(
                     "Erreur lecture du terrain : position initiale du robot manquante\n");
