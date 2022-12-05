@@ -124,11 +124,11 @@ int main(int argc, char **argv)
     /* Affichage du résultat */
     if (envt.Automate.etat == E)
     {
-        printf("La propriété n'est pas respecté !\n");
+        printf("La propriété n'est pas respectée !\n");
     }
     else if (envt.Automate.etat == M || envt.Automate.etat == I)
     {
-        printf("La propriété est respecté !\n");
+        printf("La propriété est respectée !\n");
     }
     else
     {

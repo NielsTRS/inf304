@@ -113,15 +113,6 @@ int main(int argc, char **argv) {
     } while (res == OK_ROBOT);
 
     /* Affichage du résultat */
-    if (envt.Automate.etat == I) {
-        printf("L'automate est dans l'état I\n");
-    } else if (envt.Automate.etat == M) {
-        printf("L'automate est dans l'état M\n");
-    } else if (envt.Automate.etat == E) {
-        printf("L'automate est dans l'état E\n");
-    } else {
-        printf("erreur état de l'automate inconnu\n");
-    }
     switch (res) {
         case OK_ROBOT:
             printf("Robot sur une case libre, programme non terminé (ne devrait pas "
