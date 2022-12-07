@@ -11,7 +11,6 @@
  */
 void generation_aleatoire(Terrain *T, int l, int h, float dObst);
 
-void generation_aleatoire_modifiee(Terrain *T, int l, int h, float dObst);
 
 /* determine s'il existe un chemin du centre au bord du terrain T
    version avec tableau annexe

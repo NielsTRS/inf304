@@ -24,6 +24,7 @@ erreur_terrain initialise_environnement(Environnement *envt,
 
     init_robot(&(envt->r), x, y, Est);
     envt->Automate.etat = I;
+    envt->NouvelAutomate.etat = N;
 
     return errt;
 }
@@ -42,6 +43,7 @@ resultat_deplacement avancer_envt(Environnement *envt) {
         // À corriger : il devrait y avoir une fonction pour cela dans le
         // paquetage terrain
         envt->Automate.etat = transitionAutomate(envt->Automate.etat, 'A');
+        envt->NouvelAutomate.etat = transitionNouvelAutomate(envt->NouvelAutomate.etat, 'A');
         Case case_devant = envt->t.tab[x][y];
         switch (case_devant) {
             case LIBRE:
@@ -59,12 +61,14 @@ resultat_deplacement avancer_envt(Environnement *envt) {
 /* Tourner le robot à gauche */
 void gauche_envt(Environnement *envt) {
     envt->Automate.etat = transitionAutomate(envt->Automate.etat, 'G');
+    envt->NouvelAutomate.etat = transitionNouvelAutomate(envt->NouvelAutomate.etat, 'G');
     tourner_a_gauche(&(envt->r));
 }
 
 /* Tourner le robot à droite */
 void droite_envt(Environnement *envt) {
     envt->Automate.etat = transitionAutomate(envt->Automate.etat, 'D');
+    envt->NouvelAutomate.etat = transitionNouvelAutomate(envt->NouvelAutomate.etat, 'D');
     tourner_a_droite(&(envt->r));
 }
 

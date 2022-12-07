@@ -1,6 +1,6 @@
 CC=clang -Wall
 
-PROGRAMMES=test_terrain test_robot robot_terrain test_prg curiosity curiosity-test test_generation_terrains curiosity_perf curiosity-obs
+PROGRAMMES=test_terrain test_robot robot_terrain test_prg curiosity curiosity-test test_generation_terrains curiosity-perf curiosity-obs
 
 all: $(PROGRAMMES)
 
@@ -81,7 +81,7 @@ curiosity-obs: curiosity-obs.o environnement.o programme.o interprete.o \
 	robot.o terrain.o type_pile.o  observateur.o
 	$(CC) $^ -o $@
 
-curiosity_perf: curiosity-perf.o environnement.o programme.o interprete.o \
+curiosity-perf: curiosity-perf.o environnement.o programme.o interprete.o \
 	robot.o terrain.o type_pile.o generation_terrains.o  observateur.o
 	$(CC) $^ -o $@
 

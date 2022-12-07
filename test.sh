@@ -1,1 +1,0 @@
-./test_generation_terrains 10 9 9 0.9 sortie.txt

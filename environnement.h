@@ -11,6 +11,7 @@ typedef struct {
     Robot r;
     Terrain t;
     automate Automate;
+    Nouvelautomate NouvelAutomate;
 } Environnement;
 
 /* Initialise l'environnement envt :

@@ -35,35 +35,7 @@ void generation_aleatoire(Terrain *T, int l, int h, float dObst) {
     }
 }
 
-void generation_aleatoire_modifiee(Terrain *T, int l, int h, float dObst) {
-    int obstacle;
-    int eauOuRocher;
-    T->largeur = l;
-    T->hauteur = h;
-    for (int i = 0; i < l; i++) {
-        for (int j = 0; j < h; j++) {
-            if (i != l / 2 || j != h / 2) {
-                obstacle = rand() % 101;
-                if (obstacle < dObst * 100) {
-                    eauOuRocher = rand() % 2;
-                    if (eauOuRocher == 0) {
-                        T->tab[i][j] = EAU;
-                        if (existe_chemin_vers_sortie(T) == 0) {
-                            T->tab[i][j] = LIBRE;
-                        }
-                    } else {
-                        T->tab[i][j] = ROCHER;
-                        if (existe_chemin_vers_sortie(T) == 0) {
-                            T->tab[i][j] = LIBRE;
-                        }
-                    }
-                } else {
-                    T->tab[i][j] = LIBRE;
-                }
-            }
-        }
-    }
-}
+
 
 // determine s'il existe un chemin du centre au bord du terrain T
 // version avec tableau annexe

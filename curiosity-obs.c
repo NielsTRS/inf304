@@ -124,16 +124,23 @@ int main(int argc, char **argv)
     /* Affichage du résultat */
     if (envt.Automate.etat == E)
     {
-        printf("La propriété n'est pas respectée !\n");
+        printf("La propriété mesure n'est pas respectée !\n");
     }
     else if (envt.Automate.etat == M || envt.Automate.etat == I)
     {
-        printf("La propriété est respectée !\n");
+        printf("La propriété mesure est respectée !\n");
     }
     else
     {
-        printf("erreur état de l'automate inconnu\n");
+        printf("erreur état de l'automate mesure inconnu\n");
     }
+
+    if(envt.NouvelAutomate.etat == N || envt.NouvelAutomate.etat == G || envt.NouvelAutomate.etat == D){
+        printf("La propriété demi retour est vérifiée, le robot n'a pas fait demi retour \n");
+    }else{
+        printf("La propriété demi retour n'est pas vérifiée, le robot a fait demi retour \n");
+    }
+
     switch (res)
     {
     case OK_ROBOT:
